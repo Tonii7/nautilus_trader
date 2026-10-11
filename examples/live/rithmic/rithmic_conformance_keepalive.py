@@ -81,7 +81,7 @@ def build_gateway() -> RithmicGateway:
         environment=RithmicEnv.TEST,
         username=required_env("RITHMIC_USERNAME"),
         password=required_env("RITHMIC_PASSWORD"),
-        system_name="",
+        system_name="Rithmic Test",
         app_name=DEFAULT_APP_NAME,
         app_version=DEFAULT_APP_VERSION,
         fcm_id="",
@@ -147,7 +147,10 @@ async def keepalive() -> None:
 
 
 def main() -> None:
-    asyncio.run(keepalive())
+    try:
+        asyncio.run(keepalive())
+    except KeyboardInterrupt:
+        pass
 
 
 if __name__ == "__main__":
