@@ -205,3 +205,5 @@ docs/dev_plans/
 crates/adapters/rithmic/vendor/
 
 mcr_binance_sandbox_data/
+
+mcr_rithmic_us30_data/
